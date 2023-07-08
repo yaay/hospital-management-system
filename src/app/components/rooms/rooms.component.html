@@ -1,6 +1,6 @@
 <div class="main">
-    <div class="container">
-        <button class="btn btn-primary mb-3" (click)="toggleAddMode()">Add Room</button>
+    <div class="container w-75 m-auto">
+        <button class="btn btn-add mb-3" (click)="toggleAddMode()">Add Room</button>
         <ng-container *ngIf="addMode">
             <form (submit)="addRoom()">
                 <div class="form-group">
@@ -11,14 +11,14 @@
                   <label for="description">Description:</label>
                   <input type="text" class="form-control" id="description" [(ngModel)]="newRoom.description" name="description">
                 </div>
-                <button type="submit" class="btn btn-success">Save</button>
-                <button type="button" class="btn btn-secondary" (click)="toggleAddMode()">Cancel</button>
+                <button type="submit" class="btn btn1">Save</button>
+                <button type="button" class="btn btn2" (click)="toggleAddMode()">Cancel</button>
               </form>
           </ng-container>
         <div class="row">
-            <div *ngFor="let room of rooms" class="col-md-4 col-xl-3">
-                <div class="card bg-c-pink order-card">
-                    <div class="card-block">
+            <div *ngFor="let room of rooms" class="w-50">
+                <div class="card order-card">
+                    <div class="card-block text-center">
                         <h6 class="m-b-20">Room No.</h6>
                         <h2 class="text-right">{{room.name}}</h2>
                         <p class="m-b-0">{{ room.description }}</p>

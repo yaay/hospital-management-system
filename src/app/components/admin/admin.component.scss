@@ -15,8 +15,11 @@
 
 .card
 {
-    border: none;
-    box-shadow: 0px 0px 5px #bdb9b9;
+    border:none;
+    // border: 1px solid #3c8ec8;
+    box-shadow: 0px 0px 6px #bdb9b9;
+    // background-color:#3c8ec8;
+    // color:white;
     
 }
 
@@ -31,10 +34,10 @@ div .table {
 }
 
 .adminPage{
-    background-image: url("../../../assets/images/admin.jpg");
+    background-image: url("../../../assets/images/admin1.jpg");
     background-size:cover;
     background-repeat:no-repeat;
-    height:91vh;
+    min-height:91vh;
 }
 .table-contact{
     width: 95%;
@@ -86,7 +89,7 @@ thead th{
     top: 0;
     left: 0;
     color: #ffffff;
-    background-color: #68c9ce;
+    background-color: #3c8ec8;
 }
 
 
@@ -119,11 +122,11 @@ td button{
    
 }
 .btn1{
-    background-color: 	#325f63;
+    background-color: 	#3c8ec8;
 
 }
 .btn1:hover{
-    background-color: 	#4d8f95;
+    background-color: 	#4e9ed6;
 
 }
 .btn2{

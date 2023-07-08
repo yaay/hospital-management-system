@@ -78,8 +78,8 @@
             Doctor
           </td>
           <td>
-            <button class="btn btn-warning me-3" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editDoctor(doctor)">Edit</button>
-            <button class="btn btn-danger" (click)="deleteDoctor(doctor)">Delete</button>
+            <button class="btn btn1 me-3" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editDoctor(doctor)">Edit</button>
+            <button class="btn btn2" (click)="deleteDoctor(doctor)">Delete</button>
           </td>
         </tr>
         <tr *ngFor="let receptionist of receptionists">
@@ -97,8 +97,8 @@
                 Receptionist
             </td>
             <td>
-              <button class="btn btn-warning me-3" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editReceptionist(receptionist)">Edit</button>
-              <button class="btn btn-danger" (click)="deleteReceptionist(receptionist)">Delete</button>
+              <button class="btn btn1 me-3" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editReceptionist(receptionist)">Edit</button>
+              <button class="btn btn2" (click)="deleteReceptionist(receptionist)">Delete</button>
             </td>
           </tr>
           <tr *ngFor="let patient of patients">
@@ -116,8 +116,8 @@
                 Patient
             </td>
             <td>
-              <button class="btn btn-warning me-3" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editPatient(patient)">Edit</button>
-              <button class="btn btn-danger" (click)="deletePatient(patient)">Delete</button>
+              <button class="btn btn1 me-3" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editPatient(patient)">Edit</button>
+              <button class="btn btn2" (click)="deletePatient(patient)">Delete</button>
 
             </td>
           </tr>
