@@ -1,41 +1,24 @@
 <div class="main">
     <div class="form-box container w-50">
-        <h2> APPOINTEMENT RESERVATION </h2>
-        <form class="row g-3">
+        <h2> APPOINTMENT RESERVATION </h2>
+        <form class="row g-3" (submit)="submitForm()">
             <div class="form-group">
                 <label for="inputPatient" class="form-label">Choose Patient</label>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Select Patient Name</option>
-                    <option value="1">Ahmed</option>
-                    <option value="2">Mohamed</option>
-                    <option value="3">Ali</option>
+                <select class="form-select" aria-label="Default select example" name="patientId" [(ngModel)]="appointment.patient_id" required>
+                    <option selected disabled value="">Select Patient Name</option>
+                    <option *ngFor="let patient of patients" [value]="patient.id">{{patient.name}}</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="inputPassword4" class="form-label">Choose Doctor</label>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Select Doctor Name</option>
-                    <option value="1">Ahmed</option>
-                    <option value="2">Mohamed</option>
-                    <option value="3">Ali</option>
+                <select class="form-select" aria-label="Default select example" name="doctorId" [(ngModel)]="appointment.doctor_id" required>
+                    <option selected disabled value="">Select Doctor Name</option>
+                    <option *ngFor="let doctor of doctors" [value]="doctor.id">{{doctor.name}}</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="inputCity" class="form-label">Reservation Date</label>
-                <input class="form-control" type="date" [(ngModel)]="selectedDate">
-            </div>
-            <div class="form-group">
-                <label for="inputState" class="form-label">Time</label>
-                <input class="form-control" type="time" [(ngModel)]="selectedHour" (change)="handleHourChange($event)">
-            </div>
-            <div class="form-group">
-                <label for="inputZip" class="form-label">Duration</label>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>15 Minutes</option>
-                    <option value="1">20 Minutes</option>
-                    <option value="2">30 Minutes</option>
-                    <option value="3">45 Minutes</option>
-                </select>
+                <label for="inputCity" class="form-label">Reservation Date and Time</label>
+                <input class="form-control" type="datetime-local" name="time" [(ngModel)]="appointment.time" required>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn edit-btn">Reserve</button>

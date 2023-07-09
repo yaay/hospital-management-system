@@ -13,7 +13,7 @@ export class PatientComponent implements OnInit {
   id: any;
   drLogged = false;
   addMode = false;
-  
+
 
   constructor(private _patientService: PatientService) {}
 

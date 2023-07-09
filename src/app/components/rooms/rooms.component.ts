@@ -24,6 +24,7 @@ export class RoomsComponent implements OnInit {
     this.httpClient.get<any[]>('http://localhost:8000/api/rooms').subscribe(
       response => {
         this.rooms = response;
+        localStorage.setItem("Rooms Count", response.length.toString());
       },
       error => {
         console.error('Error fetching rooms:', error);

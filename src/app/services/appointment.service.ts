@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class AppointmentService {
 
+  private apiUrl = 'http://127.0.0.1:8000/api'
   constructor(private _httpClient:HttpClient) { }
   getAppointments():Observable<any>{
     return  this._httpClient.get('http://127.0.0.1:8000/api/appointments');
@@ -16,4 +17,10 @@ export class AppointmentService {
 
    }
 
+   createAppointment(data: any): Observable<any> {
+
+    return this._httpClient.post<any>(`${this.apiUrl}/appointments`, data);
+  }
+
 }
+
