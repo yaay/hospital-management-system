@@ -20,6 +20,7 @@ export class PatientService {
   }
 
 
+  
   // createPatient(data: patientModel): Observable<patientModel> {
 
   createPatient(data: NewPatientInterface): Observable<patientModel> {

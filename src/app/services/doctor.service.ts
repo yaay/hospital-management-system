@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 // import { doctorModel } from '../models/doctors/doctorModel.model';
 
 import { doctorModel } from '../models/doctors/doctorModel.model';
+import { NewDoctorInterface } from '../interfaces/new-doctor-interface';
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +22,7 @@ export class DoctorService {
     return this._httpClinet.get<doctorModel>(`${this.apiUrl}/doctors/${id}`);
   }
 
-  createDoctor(data: doctorModel): Observable<doctorModel> {
+  createDoctor(data: NewDoctorInterface): Observable<doctorModel> {
     return this._httpClinet.post<doctorModel>(`${this.apiUrl}/doctors`, data);
   }
 

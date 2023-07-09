@@ -46,12 +46,10 @@ export class LoginComponent implements OnInit {
           console.log(localStorage.getItem('id'));
           if(localStorage.getItem('role') == '3') {
             console.log('admin')
-           
-
             this.router.navigate(['dashboard/admin'])
           }
           else if (localStorage.getItem('role') == '2') {
-            this.router.navigate(['dashboard/receptionist'])
+            this.router.navigate(['dashboard/patient'])
           }
           else if (localStorage.getItem('role') == '1') {
             this.router.navigate(['dashboard/doctor/appointments'])
