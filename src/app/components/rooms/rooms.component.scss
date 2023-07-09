@@ -1,8 +1,67 @@
 .main{
     padding-top: 7vh;
+    background-image: url('../../../assets/images/3322.png');
+    background-size:cover;
+    background-repeat:no-repeat;
+    min-height: 91vh;
 }
 .order-card {
     color: #fff;
+}
+label{
+    color: black;
+    font-size: 20px;
+}
+input, select {
+    width: 100%;
+    margin-bottom: 25px;
+    border: none;
+    outline: none;
+    border:1px solid white ;
+    background: white;
+    color: black;
+    height: 40px;
+    font-size: 16px;
+  
+  
+  }
+
+.btn-add{
+    background: white;
+    padding: 10px 20px;
+    border: 2px solid #4099ff ;
+    color: #4099ff;
+
+
+}
+
+.btn1{
+    background-color: 	#3c8ec8;
+    color: white;
+    margin:  5px;
+   
+  
+  }
+  .btn1:hover{
+    background-color: 	#4e9ed6;
+  
+  }
+  .btn2{
+    background-color: #9cbfd9;
+    color: white;
+    margin: 5px;
+  
+  }
+  .btn2:hover{
+    background-color: 	#73aad1;
+  
+  }
+.btn-add:hover{
+    background: #4099ff;
+    border: 2px solid #4099ff ;
+    color: white
+    
+
 }
 
 .bg-c-blue {
@@ -30,7 +89,21 @@
     margin-bottom: 30px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    width: 100%;
+    height: 200px;
+    background-color:#3c8ec8
+
 }
+// .card {
+//     // color: #fff;
+//     font-size: 20px;
+//     border-radius: 5px;
+//     color:#4889c2;
+//     padding :15px;
+//     background-color: white;
+//     border: 2px solid #3c8ec8;
+//     border-radius: 5px;
+// }
 
 .card .card-block {
     padding: 25px;
