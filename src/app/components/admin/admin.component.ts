@@ -6,6 +6,7 @@ import { doctorModel } from 'src/app/models/doctors/doctorModel.model';
 import { receptionistModel } from 'src/app/models/doctors/receptionistModel';
 import { patientModel } from 'src/app/models/doctors/patientModel.model';
 import { PatientService  } from 'src/app/services/patient.service';
+import { DepartmentService } from 'src/app/services/department.service';
 
 @Component({
   selector: 'app-admin',
@@ -19,13 +20,22 @@ export class AdminComponent{
   selectedDoctor: doctorModel | null = null;
   selectedReceptionist: receptionistModel | null = null;
   selectedPatient: patientModel | null = null;
+  departments!: any;
   editMode = false;
+  roomsCount!: any
 
-  constructor(private doctorService: DoctorService, private receptionistService: ReceptionistService, private patientService:PatientService) {}
+  constructor(private doctorService: DoctorService, private receptionistService: ReceptionistService, private patientService:PatientService, private departmentService: DepartmentService) {}
+
 
   ngOnInit(): void {
+    this.roomsCount = localStorage.getItem("Rooms Count");
     this.doctorService.getdoctors().subscribe(response  => {
       this.doctors = response.data;
+    });
+
+    this.departmentService.getDepartments().subscribe(response => {
+      this.departments = response;
+      // console.log(response.length)
     });
 
     this.receptionistService.getReceptionists().subscribe(response  => {
