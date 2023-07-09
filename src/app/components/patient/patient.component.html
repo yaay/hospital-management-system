@@ -1,6 +1,8 @@
 <div class="potientPage pt-5">
 <div class="container">
-  <button class="btn btn-primary mb-3" (click)="toggleAddMode()">Add Patient</button>
+  <h2>Patients</h2>
+
+  <button class="btn btn-add mb-3" (click)="toggleAddMode()">Add Patient</button>
   <ng-container *ngIf="addMode">
     <form (ngSubmit)="addPatient(newPatientForm.value)" #newPatientForm="ngForm">
       <div class="row">
@@ -35,15 +37,15 @@
           <div class="text-danger" *ngIf="newPatientForm.controls['phone_number'].touched && newPatientForm.controls['phone_number'].hasError('required')">Phone number is required</div>
         </div>
         <div class="col-md-2">
-          <button class="btn btn-success" type="submit">Save</button>
-          <button class="btn btn-secondary" type="button" (click)="toggleAddMode()">Cancel</button>
+          <button class="btn btn1" type="submit">Save</button>
+          <button class="btn btn2" type="button" (click)="toggleAddMode()">Cancel</button>
         </div>
       </div>
     </form>
   </ng-container>
 
-  <h2>Patients</h2>
 
+  <div class="table-responsive row table-contact">
   <table class="table table-striped mt-5">
     <thead>
       <tr>
@@ -73,5 +75,6 @@
       </tr>
     </tbody>
   </table>
+  </div>
 </div>
 </div>

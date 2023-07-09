@@ -1,10 +1,51 @@
 h2{
   padding: 5px;
-  color: rgb(24, 84, 148);
+  color: 	#3c8ec8;
   text-align: center;
   font-size: 40px;
   font-weight: 700;
   padding-right: 50px;
+}
+.btn-add{
+  color: #3c8ec8;
+  background-color: white;
+  border: 1px solid #3c8ec8;
+  padding: 8px 15px ;
+}
+
+ input, select {
+  width: 100%;
+  margin-bottom: 25px;
+  border: none;
+  outline: none;
+  border:1px solid white ;
+  background: white;
+  color: black;
+  height: 40px;
+  font-size: 16px;
+
+
+}
+.btn1{
+  background-color: 	#3c8ec8;
+  color: white;
+  margin: 0 5px;
+ 
+
+}
+.btn1:hover{
+  background-color: 	#4e9ed6;
+
+}
+.btn2{
+  background-color: #9cbfd9;
+  color: white;
+  margin: 0 5px;
+
+}
+.btn2:hover{
+  background-color: 	#73aad1;
+
 }
 
 div .table {
@@ -16,10 +57,10 @@ div .table {
   }
   
   .potientPage{
-    background-image: url("../../../assets/images/patient.png");
+    background-image: url("../../../assets/images/7.png");
     background-size:cover;
     background-repeat:no-repeat;
-    height:91vh;
+    min-height:91vh;
   }
   .table-contact{
     width: 95%;
@@ -61,6 +102,6 @@ div .table {
     top: 0;
     left: 0;
     color: #ffffff;
-    background-color: #2481b7;
+    background-color: #3c8ec8;
   }
   

@@ -35,16 +35,16 @@ div .table {
 }
 
 .doctorPage{
-  background-image: url("../../../assets/images/department.jpg");
+  background-image: url("../../../assets/images/doctor2.jpg");
   background-size:cover;
   background-repeat:no-repeat;
-  height:91vh;
+  min-height:91vh;
 }
 h1{
   padding: 5px;
-  color:  #4881c2;
+  color:  #3c8ec8;
   text-align: center;
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 700;
   padding: 10px;
 }
@@ -88,5 +88,5 @@ thead th{
   top: 0;
   left: 0;
   color: #ffffff;
-  background-color: #3584ab;
+  background-color: #3c8ec8;
 }
